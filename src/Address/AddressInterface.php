@@ -27,6 +27,9 @@ interface AddressInterface
     public const XMR = 'XMR';
     public const ZEC = 'ZEC';
 
+    public const ALGO = 'ALGO';
+    public const SOL = 'SOL';
+
     public function __construct(string $symbol, string $network, string $address);
 
     public function symbol(): string;

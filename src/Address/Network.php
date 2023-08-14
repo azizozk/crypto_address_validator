@@ -21,4 +21,7 @@ class Network
     public const XMR = 'XMR';
     public const XRP = 'XRP';
     public const ZEC = 'ZEC';
+
+    public const ALGO = 'ALGO';
+    public const SOL = 'SOL';
 }

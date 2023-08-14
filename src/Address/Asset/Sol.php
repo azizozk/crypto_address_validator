@@ -4,16 +4,15 @@ namespace WalletAddressValidator\Address\Asset;
 
 use WalletAddressValidator\Address\AbstractAddress;
 use WalletAddressValidator\Address\Network;
-use WalletAddressValidator\Address\Validator\ERC20 as EthValidator;
+use WalletAddressValidator\Address\Validator\Sol as SolValidator;
 
-class Mkr extends AbstractAddress
+class Sol extends AbstractAddress
 {
     protected $networkAlias = [
-        self::MKR => Network::ERC20,
-        self::ETH => Network::ERC20
+        self::SOL => Network::SOL,
     ];
 
     protected $validators = [
-        Network::ERC20 => EthValidator::class,
+        Network::SOL => SolValidator::class
     ];
 }
