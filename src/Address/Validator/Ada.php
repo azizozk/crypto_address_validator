@@ -31,6 +31,10 @@ class Ada extends AbstractBase58
             $decoder = new Decoder(new Tag\TagObjectManager(), new OtherObject\OtherObjectManager());
             $addrData = $decoder->decode($stream)->getNormalizedData();
 
+            if (!is_array($addrData) || !isset($addrData[1])) {
+                return false;
+            }
+
             if (($innerCrc = (int) $addrData[1] ?? 0) < 1) {
                 return false;
             }
