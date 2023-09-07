@@ -18,7 +18,9 @@ class Usdt extends AbstractAddress
 
     protected $validators = [
         Network::ERC20 => EthValidator::class,
+        Network::TRC20 => TrxValidator::class,
+        Network::BEP20 => EthValidator::class,
+        Network::POLYGON => EthValidator::class,
         Network::OMNI => UsdtValidator::class,
-        Network::TRC20 => TrxValidator::class
     ];
 }

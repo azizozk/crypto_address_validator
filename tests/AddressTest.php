@@ -253,8 +253,11 @@ class AddressTest extends TestCase
         $this->tryAddresses('USDT', 'OMNI', $this->withCommons([
             '1KL6n25utGRYXWyiU1SJkaqrYWYD6FurEo' => true,
             '1451oXRTetETBi5sFKLSLuwoL2vNR48x2U' => true,
+            '3MbYQMMmSkC3AgWkj9FMo5LsPTW1zBTwXL' => true,
+            '0x9ec7d40d627ec59981446a6e5acb33d51afcaf8a' => true,
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
+            '0x9ec7d40d627ec59981446a6e5acb33d51afcaf8a' => false,
             'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
         ]));
 
@@ -262,6 +265,15 @@ class AddressTest extends TestCase
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => true,
             '1KL6n25utGRYXWyiU1SJkaqrYWYD6FurEo' => false,
             '0x5e8306c6f9c46cd48522a2aab5d7cbb1c5f2ede9' => false, // ERC20
+        ]));
+
+        $this->tryAddresses('USDT', 'BEP20', $this->withCommons([
+            '0xdbe82367ce536e685b8e4496e172e26b442dd7c7' => true, // BEP20
+        ]));
+
+        $this->tryAddresses('USDT', 'POLYGON', $this->withCommons([
+            '0xBa3F83aCd6DeFF56b873DBd2b05971002EaD6231' => true, // Polygon
+            '0x35342fe71e28df1308e5ab74d2c111938aa9f4bf' => true, // Polygon
         ]));
     }
 
@@ -351,6 +363,7 @@ class AddressTest extends TestCase
                 'USDT-OMNI' => Network::OMNI,
                 'USDT-ERC20' => Network::ERC20,
                 'USDT-TRC20' => Network::TRC20,
+                'USDT-BEP20' => Network::BEP20
             ],
             'BTC' => [
                 'SOMETHING-ELSE' => Network::BTC
@@ -362,6 +375,7 @@ class AddressTest extends TestCase
         $this->assertTrue(Validator::isValid('USDT', 'USDT-ERC20', '0x5e8306c6f9c46cd48522a2aab5d7cbb1c5f2ede9'));
         $this->assertTrue(Validator::isValid('USDT', 'USDT-TRC20', 'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC'));
         $this->assertTrue(Validator::isValid('BTC', 'SOMETHING-ELSE', '1LNkDkf4rtKRozGTpPRbPtYJnY2q5N5bFW'));
+        $this->assertTrue(Validator::isValid('USDT', 'USDT-BEP20', '0xBa3F83aCd6DeFF56b873DBd2b05971002EaD6231'));
     }
 
     protected function tryAddresses(string $symbol, string $network, array $addresses): void
