@@ -6,6 +6,8 @@ class Network
 {
     public const ERC20 = 'ERC20';
     public const TRC20 = 'TRC20';
+    public const BEP20 = 'BEP20';
+    public const POLYGON  = 'POLYGON';
     public const ADA = 'ADA';
     public const BCH = 'BCH';
     public const BTC = 'BTC';
