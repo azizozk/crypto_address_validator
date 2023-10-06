@@ -1,5 +1,5 @@
 {
-    "name": "azizozk/wallet-address-validator",
+    "name": "exads/wallet-address-validator",
     "description": "Crypto wallet address validator.",
     "keywords": ["crypto", "wallet", "address", "validator", "BTC", "USDT", "ETH", "LTC", "DOGE", "LINK", "ADA", "XRP"],
     "type": "library",
@@ -13,12 +13,12 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "WalletAddressValidator\\": "src"
+            "Exads\\WalletAddressValidator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WalletAddressValidator\\Test\\": "tests"
+            "Exads\\WalletAddressValidator\\Test\\": "tests"
         }
     },
     "require-dev": {
