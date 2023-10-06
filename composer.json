@@ -10,7 +10,6 @@
             "email": "ahmet.ozkurt@inlineyazilim.com"
         }
     ],
-    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Exads\\WalletAddressValidator\\": "src"
