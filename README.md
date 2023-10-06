@@ -29,31 +29,31 @@
 
 ### Usage
 ```
-$address = \WalletAddressValidator\AddressFactory::create('BTC', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6');
+$address = \Exads\WalletAddressValidator\AddressFactory::create('BTC', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6');
 $address->isValid(); // true
 ```
 ```
-$address = \WalletAddressValidator\AddressFactory::create('NONE', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6');
+$address = \Exads\WalletAddressValidator\AddressFactory::create('NONE', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6');
 $address->isValid(); // \OutOfBoundsException
 ```
 
 
 ```
-\WalletAddressValidator\Validator::isValid('BTC', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6'); // true
+\Exads\WalletAddressValidator\Validator::isValid('BTC', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6'); // true
 ```
 
 ```
-\WalletAddressValidator\Validator::isValid('NONE', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6'); // false
+\Exads\WalletAddressValidator\Validator::isValid('NONE', 'BTC', '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6'); // false
 ```
 
 ```
-$address = \WalletAddressValidator\AddressFactory::create('XLM', 'XLM', 'GBBALM76B5OUPOZCMFCNT5PVIFV3WTUYX3VVGC7FMN4ZPQLGCG2C4X3D');
+$address = \Exads\WalletAddressValidator\AddressFactory::create('XLM', 'XLM', 'GBBALM76B5OUPOZCMFCNT5PVIFV3WTUYX3VVGC7FMN4ZPQLGCG2C4X3D');
 $address->setParams(['memo' => '1034560979']);
 $address->isValid(); // true
 ```
 
 ```
-\WalletAddressValidator\Validator::isValid(
+\Exads\WalletAddressValidator\Validator::isValid(
    'XRP', 
    'XRP', 
    'ryBANkk28Mj71jRKAkt13U1X9ubztsGWZ',
@@ -62,7 +62,7 @@ $address->isValid(); // true
 ```
 
 ```
-\WalletAddressValidator\Validator::$networkAliases = [
+\Exads\WalletAddressValidator\Validator::$networkAliases = [
     'BTC' => [
         'SOMETHING-ELSE' => Network::BTC
     ]
