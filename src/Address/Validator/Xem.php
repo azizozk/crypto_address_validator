@@ -1,10 +1,10 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator;
+namespace Exads\WalletAddressValidator\Address\Validator;
 
-use WalletAddressValidator\Address\AddressInterface;
-use WalletAddressValidator\Address\Validator\Codec\Base32;
-use WalletAddressValidator\Address\Validator\Codec\Keccak;
+use Exads\WalletAddressValidator\Address\AddressInterface;
+use Exads\WalletAddressValidator\Address\Validator\Codec\Base32;
+use Exads\WalletAddressValidator\Address\Validator\Codec\Keccak;
 
 /**
  * https://github.com/QuantumMechanics/NEM-sdk#72---verify-address-validity

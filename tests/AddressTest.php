@@ -1,11 +1,11 @@
 <?php
 
-namespace WalletAddressValidator\Test;
+namespace Exads\WalletAddressValidator\Test;
 
 use PHPUnit\Framework\TestCase;
-use WalletAddressValidator\Address\Network;
-use WalletAddressValidator\AddressFactory;
-use WalletAddressValidator\Validator;
+use Exads\WalletAddressValidator\Address\Network;
+use Exads\WalletAddressValidator\AddressFactory;
+use Exads\WalletAddressValidator\Validator;
 
 class AddressTest extends TestCase
 {

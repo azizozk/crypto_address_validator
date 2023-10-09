@@ -1,6 +1,6 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator;
+namespace Exads\WalletAddressValidator\Address\Validator;
 
 class Dash extends AbstractBase58
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace WalletAddressValidator;
+namespace Exads\WalletAddressValidator;
 
 class Validator
 {
