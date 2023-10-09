@@ -1,12 +1,12 @@
 <?php
 
-namespace WalletAddressValidator\Address\Asset;
+namespace Exads\WalletAddressValidator\Address\Asset;
 
-use WalletAddressValidator\Address\AbstractAddress;
-use WalletAddressValidator\Address\Network;
-use WalletAddressValidator\Address\Validator\ERC20 as EthValidator;
-use WalletAddressValidator\Address\Validator\OMNI as UsdtValidator;
-use WalletAddressValidator\Address\Validator\TRC20 as TrxValidator;
+use Exads\WalletAddressValidator\Address\AbstractAddress;
+use Exads\WalletAddressValidator\Address\Network;
+use Exads\WalletAddressValidator\Address\Validator\ERC20 as EthValidator;
+use Exads\WalletAddressValidator\Address\Validator\OMNI as UsdtValidator;
+use Exads\WalletAddressValidator\Address\Validator\TRC20 as TrxValidator;
 
 class Usdt extends AbstractAddress
 {

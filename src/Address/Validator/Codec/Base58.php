@@ -1,6 +1,6 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator\Codec;
+namespace Exads\WalletAddressValidator\Address\Validator\Codec;
 
 class Base58
 {

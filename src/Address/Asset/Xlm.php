@@ -1,10 +1,10 @@
 <?php
 
-namespace WalletAddressValidator\Address\Asset;
+namespace Exads\WalletAddressValidator\Address\Asset;
 
-use WalletAddressValidator\Address\AbstractAddress;
-use WalletAddressValidator\Address\Network;
-use WalletAddressValidator\Address\Validator\Xlm as XlmValidator;
+use Exads\WalletAddressValidator\Address\AbstractAddress;
+use Exads\WalletAddressValidator\Address\Network;
+use Exads\WalletAddressValidator\Address\Validator\Xlm as XlmValidator;
 
 class Xlm extends AbstractAddress
 {

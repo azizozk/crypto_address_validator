@@ -1,8 +1,8 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator;
+namespace Exads\WalletAddressValidator\Address\Validator;
 
-use WalletAddressValidator\Address\AddressInterface;
+use Exads\WalletAddressValidator\Address\AddressInterface;
 
 class Eos implements ValidatorInterface
 {

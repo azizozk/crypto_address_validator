@@ -1,9 +1,9 @@
 <?php
 
-namespace WalletAddressValidator\Address\Asset;
+namespace Exads\WalletAddressValidator\Address\Asset;
 
-use WalletAddressValidator\Address\AbstractAddress;
-use WalletAddressValidator\Address\Network;
+use Exads\WalletAddressValidator\Address\AbstractAddress;
+use Exads\WalletAddressValidator\Address\Network;
 
 class Snx extends AbstractAddress
 {

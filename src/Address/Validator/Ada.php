@@ -1,12 +1,12 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator;
+namespace Exads\WalletAddressValidator\Address\Validator;
 
 use CBOR\Decoder;
 use CBOR\OtherObject;
 use CBOR\Tag;
 use CBOR\StringStream;
-use WalletAddressValidator\Address\Validator\Codec\Base58;
+use Exads\WalletAddressValidator\Address\Validator\Codec\Base58;
 
 /**
  * @see https://docs.cardano.org/projects/cardano-wallet/en/latest/About-Address-Format---Byron.html

@@ -1,9 +1,9 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator;
+namespace Exads\WalletAddressValidator\Address\Validator;
 
-use WalletAddressValidator\Address\AddressInterface;
-use WalletAddressValidator\Address\Validator\Codec\Keccak;
+use Exads\WalletAddressValidator\Address\AddressInterface;
+use Exads\WalletAddressValidator\Address\Validator\Codec\Keccak;
 
 class ERC20 implements ValidatorInterface
 {

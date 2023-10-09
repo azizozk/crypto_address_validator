@@ -1,6 +1,6 @@
 <?php
 
-namespace WalletAddressValidator\Address\Validator\Support;
+namespace Exads\WalletAddressValidator\Address\Validator\Support;
 
 class CashAddress
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace WalletAddressValidator\Address;
+namespace Exads\WalletAddressValidator\Address;
 
-use WalletAddressValidator\Address\Validator\ValidatorInterface;
+use Exads\WalletAddressValidator\Address\Validator\ValidatorInterface;
 
 class AbstractAddress implements AddressInterface
 {

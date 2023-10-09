@@ -1,6 +1,6 @@
 <?php
 
-namespace WalletAddressValidator\Address;
+namespace Exads\WalletAddressValidator\Address;
 
 interface AddressInterface
 {
