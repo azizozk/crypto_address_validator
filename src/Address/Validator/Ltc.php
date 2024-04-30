@@ -29,12 +29,10 @@ class Ltc implements ValidatorInterface
         return $this->validator()->validate();
     }
 
-
-
     private function validator(): ValidatorInterface
     {
-        foreach ($this->prefixes as $prefix => $class){
-            if( $this->hasPrefix($this->address->address(), $prefix) ){
+        foreach ($this->prefixes as $prefix => $class) {
+            if ($this->hasPrefix($this->address->address(), $prefix)) {
                 return new $class($this->address);
             }
         }

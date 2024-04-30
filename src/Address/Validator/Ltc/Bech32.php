@@ -24,28 +24,29 @@ class Bech32 implements ValidatorInterface
     {
         // try to decode address with different algo version
         // address is valid if no exception returned
-        foreach ([$this->converter::BECH32, $this->converter::BECH32M] as $encoding){
-            try{
+        foreach ([$this->converter::BECH32, $this->converter::BECH32M] as $encoding) {
+            try {
                 $this->converter->decodeSegwit(
                     $this->hrpFromAddress(),
                     $this->address->address(),
                     $encoding
                 );
                 return true;
-            }catch (Bech32Exception $e){
-                // ignore exception
+            } catch (Bech32Exception $e) {
+                // ignore exception, true is returned in try section
+                // otherwise false must be returned in the method end
             }
         }
-
+        
         return false;
     }
 
     /**
      * Get human-readable part from the wallet address
-    */
+     */
     private function hrpFromAddress(): string
     {
-        if( preg_match("/^(\S*)1.*$/U", $this->address->address(), $matches) !==1) {
+        if (preg_match("/^(\S*)1.*$/U", $this->address->address(), $matches) !== 1) {
             return "";
         }
         return $matches[1];
