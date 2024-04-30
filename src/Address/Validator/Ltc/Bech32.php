@@ -10,13 +10,15 @@ use Kielabokkie\Bitcoin\Exceptions\Bech32Exception;
 class Bech32 implements ValidatorInterface
 {
 
-    private AddressInterface $address;
+    private string $address;
     private KielabokkieBech32 $converter;
 
 
     public function __construct(AddressInterface $address)
     {
-        $this->address = $address;
+        // Bech32 is "case-insensitive", but works only with lowercase letters.
+        // need to be sure that the address is in lowercase
+        $this->address = strtolower($address->address());
         $this->converter = new KielabokkieBech32();
     }
 
@@ -28,7 +30,7 @@ class Bech32 implements ValidatorInterface
             try {
                 $this->converter->decodeSegwit(
                     $this->hrpFromAddress(),
-                    $this->address->address(),
+                    $this->address,
                     $encoding
                 );
                 return true;
@@ -37,7 +39,7 @@ class Bech32 implements ValidatorInterface
                 // otherwise false must be returned in the method end
             }
         }
-        
+
         return false;
     }
 
@@ -46,7 +48,7 @@ class Bech32 implements ValidatorInterface
      */
     private function hrpFromAddress(): string
     {
-        if (preg_match("/^(\S*)1.*$/U", $this->address->address(), $matches) !== 1) {
+        if (preg_match("/^(\S*)1.*$/U", $this->address, $matches) !== 1) {
             return "";
         }
         return $matches[1];

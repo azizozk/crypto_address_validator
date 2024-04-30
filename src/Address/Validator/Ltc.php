@@ -31,8 +31,11 @@ class Ltc implements ValidatorInterface
 
     private function validator(): ValidatorInterface
     {
+        // Bech32 is case-insensitive
+        $addr = strtolower($this->address->address());
+
         foreach ($this->prefixes as $prefix => $class) {
-            if ($this->hasPrefix($this->address->address(), $prefix)) {
+            if ($this->hasPrefix($addr, $prefix)) {
                 return new $class($this->address);
             }
         }

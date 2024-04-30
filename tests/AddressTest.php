@@ -25,14 +25,14 @@ class AddressTest extends TestCase
     public function testBtc()
     {
         $this->tryAddresses('BTC', 'BTC', $this->withCommons([
-            '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6'=> true, // BTC
-            '3Binkv2nwkvNxcF9pvc27W51VBP5Ys9t2W'=> true,
-            '1LNkDkf4rtKRozGTpPRbPtYJnY2q5N5bFW'=> true,
-            '31hPmKswv7MnyKfGkwppee88mA1k4F1xPS'=> true,
-            '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE'=> true,
-            '0x25bb155b18958983bb380e738bf676169e7cd531'=> false, // ERC20
+            '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6' => true, // BTC
+            '3Binkv2nwkvNxcF9pvc27W51VBP5Ys9t2W' => true,
+            '1LNkDkf4rtKRozGTpPRbPtYJnY2q5N5bFW' => true,
+            '31hPmKswv7MnyKfGkwppee88mA1k4F1xPS' => true,
+            '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE' => true,
+            '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // ERC20
             // '0x25bb155b18958983bb380e738bf676169e7cd531'=> false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
             'bc1qhhm5qj0l0zvrcr92nyz5l7usmxn90tkr6ed0an' => false, // SEGWIT
         ]));
     }
@@ -41,12 +41,12 @@ class AddressTest extends TestCase
     {
         $this->tryAddresses('ETH', 'ETH', $this->withCommons([
             '1LNkDkf4rtKRozGTpPRbPtYJnY2q5N5bFW' => false, // BTC
-            '0x25bb155b18958983bb380e738bf676169e7cd531'=> true, // ERC20
-            '0x1ad91ee08f21be3de0ba2ba6918e714da6b45836'=> true,
-            '0x5238d5ba8e44ffb68e6d8ff75d86d35a9b822785'=> true,
-            '0x97122dDca38c29b7653D52b07998d06a7128fa0B'=> true,
-            '0x88e0bfff95f165ac696bee31848a9907ee63ba7f'=> true,
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo'=> '104067442', 'assertion' => false], // BEP2
+            '0x25bb155b18958983bb380e738bf676169e7cd531' => true, // ERC20
+            '0x1ad91ee08f21be3de0ba2ba6918e714da6b45836' => true,
+            '0x5238d5ba8e44ffb68e6d8ff75d86d35a9b822785' => true,
+            '0x97122dDca38c29b7653D52b07998d06a7128fa0B' => true,
+            '0x88e0bfff95f165ac696bee31848a9907ee63ba7f' => true,
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -60,14 +60,14 @@ class AddressTest extends TestCase
             'M9RA4VtQ2uGrKtykaSE6qf1w8t4tNMYtaH' => true,
             'MF7vDsRKMfKvQBQVjheMrtFR45SXhYvkzj' => true,
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
 
             //LTC Bech32 (SegWit)
             'ltc1qyleqvngzzqfa6dgn93eafsr0ezzx7f5l85xxn5' => true,
             'ltc1qggj4z2a845m4hzvmxdcrqyt9dkzedrtt5ym8nx' => true,
             'ltc1qg42tkwuuxefutzxezdkdel39gfstuap288mfea' => true,
             'tltc1qu78xur5xnq6fjy83amy0qcjfau8m367defyhms' => true,
-            'Ltc1qv6tqa6enk8kqpz9a83lnmth4km53u9ttleg76l' => false,
+            'Ltc1qv6tqa6enk8kqpz9a83lnmth4km53u9ttleg76l' => true,
         ]));
     }
 
@@ -105,7 +105,7 @@ class AddressTest extends TestCase
             '0x564286362092d8e7936f0549571a803b203aaced' => true, // ERC20
             '0xab5719abea0b36c8d027f2453196d2619370bd00' => true, // ERC20
             '0xb28f28b9e900c569ff5717a133107015b85f1359' => true, // ERC20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -117,7 +117,7 @@ class AddressTest extends TestCase
             'DDpEZDEcaj333uac3rNMU5Z8iF5ifG9Joc' => true, // DOGE
             'DFrLZz9kCWzL5Wuj7XqzEXYZhK1hTVuYM2' => true, // DOGE
             'DFANjjEQtmrNb3VYAuyTSPNcVKK4E9sZKi' => true, // DOGE
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -129,17 +129,17 @@ class AddressTest extends TestCase
             '0x49087b56852e9eb4204334bc808d7796a1d3b614' => true, // ERC20
             '0xb06d72896616295d7ac1fc0337fd9cf7734b896b' => true, // ERC20
             '0x79ee0687e6643c67aabab0abe836d49dbf76e0ee' => true, // ERC20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
     public function testXrp()
     {
         $this->tryAddresses('XRP', 'XRP', $this->withCommons([
-            'rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh'=> ['tag'=> '108374035', 'assertion' => true], // XRP
-            'ryBANkk28Mj71jRKAkt13U1X9ubztsGWZ'=> ['tag'=> '851882565', 'assertion' => true], // XRP
+            'rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh' => ['tag' => '108374035', 'assertion' => true], // XRP
+            'ryBANkk28Mj71jRKAkt13U1X9ubztsGWZ' => ['tag' => '851882565', 'assertion' => true], // XRP
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -147,13 +147,24 @@ class AddressTest extends TestCase
     {
         // https://stellarchain.io/
         $this->tryAddresses('XLM', 'XLM', $this->withCommons([
-            '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // ERC20
-            'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
-            'GBBALM76B5OUPOZCMFCNT5PVIFV3WTUYX3VVGC7FMN4ZPQLGCG2C4X3D' => ['memo'=> '12345678901234567890123456789', 'assertion' => false],
-            'GABWDIF2UM5HV7TQ5U5YB6YQJVXX76LRUPVMWKWQOO3TANRIRQJFZ6X2' => ['memo'=> '1234567890123456789012345678', 'assertion' => true],
-            'GAHK7EEG2WWHVKDNT4CEQFZGKF2LGDSW2IVM4S5DP42RBW3K6BTODB4A' => ['memo'=> '1034560979', 'assertion' => true], // XLM
-            'GAUJETIZVEP2NRYLUESJ3LS66NVCEGMON4UDCBCSBEVPIID773P2W6AY' => ['memo'=> '565969678', 'assertion' => true], // XLM
-            'GAVF6ZB7Z7FKCWM5HEY2OV4ENPK3OSSHMFTVR4HHSBFHKW36U3FUH2CB' => ['assertion' => true], // XLM
+            '0x25bb155b18958983bb380e738bf676169e7cd531' => false,
+            // ERC20
+            'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false,
+            // TRC20
+            'GBBALM76B5OUPOZCMFCNT5PVIFV3WTUYX3VVGC7FMN4ZPQLGCG2C4X3D' => [
+                'memo' => '12345678901234567890123456789',
+                'assertion' => false
+            ],
+            'GABWDIF2UM5HV7TQ5U5YB6YQJVXX76LRUPVMWKWQOO3TANRIRQJFZ6X2' => [
+                'memo' => '1234567890123456789012345678',
+                'assertion' => true
+            ],
+            'GAHK7EEG2WWHVKDNT4CEQFZGKF2LGDSW2IVM4S5DP42RBW3K6BTODB4A' => ['memo' => '1034560979', 'assertion' => true],
+            // XLM
+            'GAUJETIZVEP2NRYLUESJ3LS66NVCEGMON4UDCBCSBEVPIID773P2W6AY' => ['memo' => '565969678', 'assertion' => true],
+            // XLM
+            'GAVF6ZB7Z7FKCWM5HEY2OV4ENPK3OSSHMFTVR4HHSBFHKW36U3FUH2CB' => ['assertion' => true],
+            // XLM
         ]));
     }
 
@@ -164,7 +175,7 @@ class AddressTest extends TestCase
             '0x25bb155b18958983bb380e738bf676169e7cd531' => true, // ERC20
             '0xca0762b1bbd6f35cf29bbff654beb3904e961724' => true, // ERC20
             // '0x25bb155b18958983bb380e738bf676169e7cd531' => true, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -180,7 +191,7 @@ class AddressTest extends TestCase
             '167FQQrBLUmhfMiYSEHaBprp34fphBiLm6' => true, // BCH  legacy
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // ERC20
             // '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -189,21 +200,21 @@ class AddressTest extends TestCase
         // https://eostracker.io/
         $this->tryAddresses('EOS', 'EOS', $this->withCommons([
             '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE' => false, // BTC
-            'binancecleos' => ['memo'=> '101418505', 'assertion' => true], // EOS
-            'koineksadres' => ['memo'=> '624245714', 'assertion' => true], // EOS
+            'binancecleos' => ['memo' => '101418505', 'assertion' => true], // EOS
+            'koineksadres' => ['memo' => '624245714', 'assertion' => true], // EOS
             // 'koineksadres' => ['memo'=> '624245714', 'assertion' => true], // EOS
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
     public function testXem()
     {
         $this->tryAddresses('XEM', 'XEM', $this->withCommons([
-            'NC64UFOWRO6AVMWFV2BFX2NT6W2GURK2EOX6FFMZ' => ['memo'=> '107187264', 'assertion' => true], // XEM
-            'NDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUER4' => ['memo'=> '495175104', 'assertion' => true], // XEM
-            'NDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUERX' => ['memo'=> '495175104', 'assertion' => false], // XEM
-            'XDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUERX' => ['memo'=> '495175104', 'assertion' => false], // XEM
+            'NC64UFOWRO6AVMWFV2BFX2NT6W2GURK2EOX6FFMZ' => ['memo' => '107187264', 'assertion' => true], // XEM
+            'NDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUER4' => ['memo' => '495175104', 'assertion' => true], // XEM
+            'NDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUERX' => ['memo' => '495175104', 'assertion' => false], // XEM
+            'XDROMSHKOBMDEXYI3Y7VB2XN35YNE5P5HCGAUERX' => ['memo' => '495175104', 'assertion' => false], // XEM
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // ERC20
             '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE' => false, // BTC
         ]));
@@ -231,7 +242,7 @@ class AddressTest extends TestCase
             'GQDF7X8qw1wF2NfQo3kfJ9Acdh4RhczgDE' => true,
             'AVYRUEuXctTbNijA8tXbfLMaDyRp4jirXN' => true,
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -242,7 +253,7 @@ class AddressTest extends TestCase
             '4468952d341359da979262301d8be5636afcd3e8' => true, // ETC
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
             '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE' => false, // BTC
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -254,7 +265,7 @@ class AddressTest extends TestCase
             '1KL6n25utGRYXWyiU1SJkaqrYWYD6FurEo' => false, // OMNI
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
             // '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
 
         $this->tryAddresses('USDT', 'OMNI', $this->withCommons([
@@ -265,7 +276,7 @@ class AddressTest extends TestCase
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false, // TRC20
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
             '0x9ec7d40d627ec59981446a6e5acb33d51afcaf8a' => false,
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
 
         $this->tryAddresses('USDT', 'TRC20', $this->withCommons([
@@ -291,7 +302,7 @@ class AddressTest extends TestCase
             'TYMFxi9aTH5Wn72LMie1DfEtRYQXrdVpVk' => true, // TRC20
             '3CyWjNfTscP38G7XR8GgUkHEfQ3cJqv9xE' => false, // BTC
             '0x5e8306c6f9c46cd48522a2aab5d7cbb1c5f2ede9' => false, // ERC20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
@@ -300,32 +311,40 @@ class AddressTest extends TestCase
         $this->tryAddresses('BTT', 'TRX', $this->withCommons([
             'TS4dbhDuRPzwUBhyVQBKHgj4iaTBL1E8G2' => true, // TRC 20
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => true, // TRC 20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
         $this->tryAddresses('BTT', 'BTT', $this->withCommons([
             'TS4dbhDuRPzwUBhyVQBKHgj4iaTBL1E8G2' => true, // TRC 20
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => true, // TRC 20
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
         ]));
     }
 
     public function testAda()
     {
         $this->tryAddresses('ADA', 'ADA', $this->withCommons([
-            'DdzFFzCqrhsvbtsmzHGgUAND9yvNc9WTM96nHWrSTQEukZyrqSWhyhv7ePPUJpp5wxPxFHYc7ZCPcUDyZLruYQNSLUCHCfFEsUyqQhim' => true, // ADA Daedalus
-            'DdzFFzCqrhsrcfeLYqFbWThXHLzK4PQnHoTtB2FJL7bHmkZ1xdtxnhGPe8KSL8xtihBXTW9PKeXR9vF1pcQQDHyHkDCUKMW5a3tSMXz9' => true, // ADA Daedalus
-            'Ae2tdPwUPEZFRbyhz3cpfC2CumGzNkFBN2L42rcUc2yjQpEkxDbkPodpMAi' => true, // ADA Yoroi
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
-            '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
+            'DdzFFzCqrhsvbtsmzHGgUAND9yvNc9WTM96nHWrSTQEukZyrqSWhyhv7ePPUJpp5wxPxFHYc7ZCPcUDyZLruYQNSLUCHCfFEsUyqQhim' => true,
+            // ADA Daedalus
+            'DdzFFzCqrhsrcfeLYqFbWThXHLzK4PQnHoTtB2FJL7bHmkZ1xdtxnhGPe8KSL8xtihBXTW9PKeXR9vF1pcQQDHyHkDCUKMW5a3tSMXz9' => true,
+            // ADA Daedalus
+            'Ae2tdPwUPEZFRbyhz3cpfC2CumGzNkFBN2L42rcUc2yjQpEkxDbkPodpMAi' => true,
+            // ADA Yoroi
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false],
+            // BEP2
+            '0x25bb155b18958983bb380e738bf676169e7cd531' => false,
+            // BEP20
         ]));
     }
 
     public function testXmr()
     {
         $this->tryAddresses('XMR', 'XMR', $this->withCommons([
-            '8BMJSiN6VGmDMR7Lq3zEQoLUnV8mJq9tzSCmy7UA33qkbG2RBb63dV6MFmQT8jLEiTaE15QndzGsDcRPJNQn8trtEXEPAXR' => true, // XMR
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
-            '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
+            '8BMJSiN6VGmDMR7Lq3zEQoLUnV8mJq9tzSCmy7UA33qkbG2RBb63dV6MFmQT8jLEiTaE15QndzGsDcRPJNQn8trtEXEPAXR' => true,
+            // XMR
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false],
+            // BEP2
+            '0x25bb155b18958983bb380e738bf676169e7cd531' => false,
+            // BEP20
         ]));
     }
 
@@ -334,7 +353,7 @@ class AddressTest extends TestCase
         $this->tryAddresses('ZEC', 'ZEC', $this->withCommons([
             't1N6recT4w5xKVtKwiwjoC6SMNWz7sd1W8H' => true, // ZEC
             't1QboPyrUyjL9cWBaqEtpaADTX5sQRpL8zk' => true, // ZEC
-            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+            'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23' => ['memo' => '104067442', 'assertion' => false], // BEP2
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
         ]));
     }
@@ -407,6 +426,6 @@ class AddressTest extends TestCase
                 'asdfasdfasdfsadfsadfasdfsadfasdfas' => false,
                 '..................................' => false,
                 '**********************************' => false,
-        ] + $addition;
+            ] + $addition;
     }
 }
