@@ -61,6 +61,13 @@ class AddressTest extends TestCase
             'MF7vDsRKMfKvQBQVjheMrtFR45SXhYvkzj' => true,
             '0x25bb155b18958983bb380e738bf676169e7cd531' => false, // BEP20
             'bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23'=> ['memo'=> '104067442', 'assertion' => false], // BEP2
+
+            //LTC Bech32 (SegWit)
+            'ltc1qyleqvngzzqfa6dgn93eafsr0ezzx7f5l85xxn5' => true,
+            'ltc1qggj4z2a845m4hzvmxdcrqyt9dkzedrtt5ym8nx' => true,
+            'ltc1qg42tkwuuxefutzxezdkdel39gfstuap288mfea' => true,
+            'tltc1qu78xur5xnq6fjy83amy0qcjfau8m367defyhms' => true,
+            'Ltc1qv6tqa6enk8kqpz9a83lnmth4km53u9ttleg76l' => false,
         ]));
     }
 
