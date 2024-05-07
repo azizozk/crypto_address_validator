@@ -6,7 +6,7 @@ use Exads\WalletAddressValidator\Address\AbstractAddress;
 use Exads\WalletAddressValidator\Address\Network;
 use Exads\WalletAddressValidator\Address\Validator\ERC20 as EthValidator;
 
-class Shib extends AbstractAddress
+class Snx extends AbstractAddress
 {
     protected $networkAlias = [
         self::ETH => Network::ERC20,
