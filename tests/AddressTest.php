@@ -393,11 +393,11 @@ class AddressTest extends TestCase
 
     public function testSnx()
     {
-        $this->tryAddresses('SHIB', 'ETH', $this->withCommons([
-            '0x5fd79d46eba7f351fe49bff9e87cdea6c821ef9f' => true, // ERC20
-            '0xe69f81b825d7dc31ee9becef4dbeab5cf30e3abb' => true, // ERC20
-            '0x0d0452f487d1edc869d1488ae984590ca2900d2f' => true, // ERC20
-            '0x0d0452f487d1edc869d1488ae984590ca2900d2f' => true, // ERC20
+        $this->tryAddresses('SNX', 'ETH', $this->withCommons([
+            '0xfad53cc9480634563e8ec71e8e693ffd07981d38' => true, // ERC20
+            '0x27cc4d6bc95b55a3a981bf1f1c7261cda7bb0931' => true, // ERC20
+            '0x46f80018211d5cbbc988e853a8683501fca4ee9b' => true, // ERC20
+            '0x4caabd8de315ccb0b895edc2bfeda5de27072fac' => true, // ERC20
             't1QboPyrUyjL9cWBaqEtpaADTX5sQRpL8zk' => false, // malformed
             'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false,  // TRC20
             'TYMFxi9aTH5Wn72LMie1DfEtRYQXrdVpVk' => false, // TRC20
