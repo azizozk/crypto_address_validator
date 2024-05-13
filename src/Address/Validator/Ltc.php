@@ -2,23 +2,51 @@
 
 namespace Exads\WalletAddressValidator\Address\Validator;
 
-class Ltc extends AbstractBase58
+use Exads\WalletAddressValidator\Address\AddressInterface;
+use Exads\WalletAddressValidator\Address\Validator\Ltc\Base58 as LtcBase58;
+use Exads\WalletAddressValidator\Address\Validator\Ltc\Bech32 as LtcBech32;
+
+class Ltc implements ValidatorInterface
 {
-    const DEPRECATED_ADDRESS_VERSION = '05';
 
-    protected $deprecatedAllowed = true;
+    private const VALIDATOR_DEFAULT = LtcBase58::class;
+    private AddressInterface $address;
 
-    protected $base58PrefixToHexVersion = [
-        'L' => '30',
-        'M' => '32',
-        '3' => self::DEPRECATED_ADDRESS_VERSION
+    // map prefix to validator class
+    private array $prefixes = [
+        'ltc1' => LtcBech32::class,
+        'tltc1' => LtcBech32::class,
     ];
 
-    protected function validateVersion($version): bool
+
+    public function __construct(AddressInterface $address)
     {
-        if ($this->addressVersion === self::DEPRECATED_ADDRESS_VERSION && !$this->deprecatedAllowed) {
-            return false;
+        $this->address = $address;
+    }
+
+    public function validate(): bool
+    {
+        return $this->validator()->validate();
+    }
+
+    private function validator(): ValidatorInterface
+    {
+        // Bech32 is case-insensitive
+        $addr = strtolower($this->address->address());
+
+        foreach ($this->prefixes as $prefix => $class) {
+            if ($this->hasPrefix($addr, $prefix)) {
+                return new $class($this->address);
+            }
         }
-        return hexdec($version) === hexdec($this->addressVersion);
+
+        $class = self::VALIDATOR_DEFAULT;
+        return new $class($this->address);
+    }
+
+
+    private function hasPrefix(string $address, string $prefix): bool
+    {
+        return substr($address, 0, strlen($prefix)) === $prefix;
     }
 }

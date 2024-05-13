@@ -26,6 +26,7 @@
     },
     "require": {
         "ext-bcmath": "*",
-        "spomky-labs/cbor-php": "^2.0"
+        "spomky-labs/cbor-php": "^2.0",
+        "kielabokkie/bitcoin-address-validator": "^2.2"
     }
 }
