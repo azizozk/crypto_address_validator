@@ -404,6 +404,32 @@ class AddressTest extends TestCase
         $this->assertTrue(Validator::isValid('USDT', 'USDT-BEP20', '0xBa3F83aCd6DeFF56b873DBd2b05971002EaD6231'));
     }
 
+    public function testShib()
+    {
+        $this->tryAddresses('SHIB', 'ETH', $this->withCommons([
+            '0xC8C5dED0aafAA04439FbE787B79DcAA62f152be8' => true, // ERC20
+            '0x57c281e8904d5abe9709df0d63b4f65c47e076ac' => true, // ERC20
+            '0xdfd5293d8e347dfe59e90efd55b2956a1343963d' => true, // ERC20
+            '0x0bd7e5aa6d2adf0d5f33404872bafbd769f434f7' => true, // ERC20
+            't1QboPyrUyjL9cWBaqEtpaADTX5sQRpL8zk' => false, // malformed
+            'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false,  // TRC20
+            'TYMFxi9aTH5Wn72LMie1DfEtRYQXrdVpVk' => false,  // TRC20
+        ]));
+    }
+
+    public function testSnx()
+    {
+        $this->tryAddresses('SNX', 'ETH', $this->withCommons([
+            '0xfad53cc9480634563e8ec71e8e693ffd07981d38' => true, // ERC20
+            '0x27cc4d6bc95b55a3a981bf1f1c7261cda7bb0931' => true, // ERC20
+            '0x46f80018211d5cbbc988e853a8683501fca4ee9b' => true, // ERC20
+            '0x4caabd8de315ccb0b895edc2bfeda5de27072fac' => true, // ERC20
+            't1QboPyrUyjL9cWBaqEtpaADTX5sQRpL8zk' => false, // malformed
+            'TNGNYjStMYALYbCQBmwTb1rjgutUQtQYHC' => false,  // TRC20
+            'TYMFxi9aTH5Wn72LMie1DfEtRYQXrdVpVk' => false, // TRC20
+        ]));
+    }
+
     protected function tryAddresses(string $symbol, string $network, array $addresses): void
     {
         foreach ($addresses as $address => $assertion) {
