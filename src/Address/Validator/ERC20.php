@@ -25,7 +25,7 @@ class ERC20 implements ValidatorInterface
             return true;
         }
 
-        return $this->verifyChecksum();
+        return $this->verifyChecksum(substr($this->address->address(), 2));
     }
 
 
@@ -40,21 +40,17 @@ class ERC20 implements ValidatorInterface
         return strtolower($address) === $address || strtoupper($address) === $address;
     }
 
-    protected function verifyChecksum(): bool
+    private static function verifyChecksum($address): int
     {
-        $address = ltrim($this->address->address(), 'x0');
-        $hash = Keccak::hash(strtolower($address), 256);
+        $addressHash = Keccak::hash(strtolower($address), 256);
+        $addressArray = str_split($address);
+        $addressHashArray = str_split($addressHash);
 
-        // See: https://github.com/web3j/web3j/pull/134/files#diff-db8702981afff54d3de6a913f13b7be4R42
         for ($i = 0; $i < 40; $i++) {
-            if (ctype_alpha($address[$i])) {
-                // Each uppercase letter should correlate with a first bit of 1 in the hash char with the same index,
-                // and each lowercase letter with a 0 bit.
-                $charInt = intval($hash[$i], 16);
-
-                if ((ctype_upper($address[$i]) && $charInt <= 7) || (ctype_lower($address[$i]) && $charInt > 7)) {
-                    return false;
-                }
+            // the nth letter should be uppercase if the nth digit of casemap is 1
+            if ((intval($addressHashArray[$i], 16) > 7 && strtoupper($addressArray[$i]) !== $addressArray[$i]) ||
+                (intval($addressHashArray[$i], 16) <= 7 && strtolower($addressArray[$i]) !== $addressArray[$i])) {
+                return false;
             }
         }
 
